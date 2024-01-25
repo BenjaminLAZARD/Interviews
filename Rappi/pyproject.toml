@@ -1,0 +1,32 @@
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+# line_length = 88
+include_trailing_comma = true
+# py_version=310
+
+
+[tool.poetry]
+name = "rappi-mle-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Benjamin Lazard"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = {extras = ["jupyter"], version = "^23.12.1"}
+pandas = "^2.2.0"
+scikit-learn = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

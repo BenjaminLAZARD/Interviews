@@ -1,0 +1,2 @@
+format-everything:
+	black .
