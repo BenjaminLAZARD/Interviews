@@ -3,13 +3,24 @@
 Refer to file [Rappi - MLE Challenge.md](Rappi%20-%20MLE%20Challenge.md)
 The goal of this repository is to show a basic architecture for an ML project. The emphasis is not on ML but rather on setting up a repository with goof practices.
 
+## Environment
+
+Any python environment should work. poetry is used as an environment manager and dependencies are in the pyproject.toml file.
+Best practice is to use poetry.lock in production but the configuration here is simple enough.
+
+```bash
+cd "this project's root on your machine"
+poetry init #uses toml dependencies only 
+poetry install #optionally "--without dev"
+```
+
 ## Setting up the IDE
 
 If using vscode you can use the launch and settings parameters defined in .vscode . Notice that for compatibility with pytest you may have to create a .env file in this folder containing
 
-    ```makefile
-    PYTHONPATH="<absolute path to the rootdirectory of this project on your machine>"
-    ```
+```bash
+PYTHONPATH="absolute path to the root directory of this project on your machine"
+```
 
 ## Packaging
 
@@ -61,3 +72,4 @@ Here are the next stages to put this into production.
 - Evaluation could be improved further with other relevant metrics. Specifically a procedure should be chosen for model selection between several models. A dashboard could be built (using a BI tool or fastapi)
 - Setting a random seed for result reproductibility would make sense.
 - When the model weights are saved, a history should be kept (AWS S3 bucket?) and the code be built in accordance. Predictions as well should be output to a SQL DB or a parquet file in the cloud chosen.
+- Thoroughly document the code and its usage. Mkdoc and its alternative can be considered. The company should also use a centralized documentation. Confluence does not play that role yet.

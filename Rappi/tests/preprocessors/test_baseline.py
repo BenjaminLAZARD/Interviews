@@ -26,7 +26,9 @@ def test_CustomPreprocessor():
     assert cp.categorical_columns == ["d"]
 
     dft = cp.transform(df)
-    assert set(dft.columns) == {"cat", "d_p", "d_x"}
+    assert set(dft.columns) in ({"cat", "d_x"}, {"cat", "d_p"})
     assert (dft["cat"] == np.array([0, 1, 1])).all()
-    assert dft["d_p"][0] == dft["d_p"][2]
-    assert dft["d_p"][0] in (0, 1)
+
+    c = "d_p" if "d_p" in set(dft.columns) else "d_x"
+    assert dft[c][0] == dft[c][2]
+    assert dft[c][0] in (0, 1)

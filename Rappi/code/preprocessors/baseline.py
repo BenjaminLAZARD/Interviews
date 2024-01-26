@@ -5,16 +5,24 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 class CustomPreprocessor(BaseEstimator, TransformerMixin):
+    """A custom estimator that does the following in one piece
+    - filter NaN columns and drop features or replace missing values
+    - ignore selected columns
+    - OH encode categorical features
+    """
+
     def __init__(
         self,
         percentage_null_accepted: float = 0.5,
         categorical_columns: list[str] | None = None,
         ignored_columns: list[str] | None = ["name", "ticket", "body", "cabin"],
+        fillNaN_value=-1,
     ) -> None:
         self.percentage_null_accepted = percentage_null_accepted
         self.columns = []
         self.categorical_columns = categorical_columns
         self.ignored_columns = ignored_columns
+        self.fillNaN_value = fillNaN_value
 
     def fit(self, X: pd.DataFrame, y: pd.DataFrame | None = None) -> TransformerMixin:
         # ignore selected columns
@@ -43,7 +51,10 @@ class CustomPreprocessor(BaseEstimator, TransformerMixin):
         # print(self.columns, self.numerical_columns, self.categorical_columns)
 
         self.oh_encoder = OneHotEncoder(
-            categories="auto", handle_unknown="infrequent_if_exist", sparse_output=False, drop="if_binary"
+            categories="auto",
+            handle_unknown="infrequent_if_exist",
+            sparse_output=False,
+            drop="if_binary",
         )
         self.oh_encoder.fit(X[self.categorical_columns])
 
@@ -61,8 +72,14 @@ class CustomPreprocessor(BaseEstimator, TransformerMixin):
 
         # fillna of missing columns with a dummy value
         Xout = pd.concat([Xoutn, Xoutc], axis=1)
+        self._features_names = (
+            self.numerical_columns + list(self.oh_encoder.get_feature_names_out())
+        )
 
-        return Xout.fillna(-1)
+        return Xout.fillna(self.fillNaN_value)
+
+    def get_feature_names_out(self) -> list[str]:
+        return self._features_names
 
 
 class AgeTransformer(BaseEstimator, TransformerMixin):
