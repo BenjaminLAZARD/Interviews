@@ -1,7 +1,8 @@
+import pickle
+
+import pandas as pd
 from sklearn.base import BaseEstimator
 from sklearn.model_selection import cross_val_score
-import pandas as pd
-import pickle
 
 
 def train(

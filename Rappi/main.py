@@ -1,22 +1,38 @@
-from sklearn.datasets import fetch_openml
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split
-from code.preprocessors.baseline import AgeTransformer, CustomPreprocessor
 from code.estimators.baseline import BaselineEstimator
-from code.training.base_trainer import train
-from code.prediction.base_predictor import load_model_from_path
 from code.evaluation.base_evaluator import evaluate
+from code.prediction.base_predictor import load_model_from_path
+from code.preprocessors.baseline import AgeTransformer, CustomPreprocessor
+from code.training.base_trainer import train
+
+from sklearn.datasets import fetch_openml
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
 
 MODEL_PATH = "saved_models/baselinemodel.pkl"
 
 X, y = fetch_openml(name="titanic", version=1, as_frame=True, return_X_y=True)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
 
 model = Pipeline(
     [
-        ("ageTransformmer", AgeTransformer),
-        ("preprocessor", CustomPreprocessor),
-        ("estimator", BaselineEstimator),
+        ("ageTransformmer", AgeTransformer()),
+        (
+            "preprocessor",
+            CustomPreprocessor(
+                categorical_columns=["pclass", "sex", "sibsp", "parch", "embarked"],
+                ignored_columns=[
+                    "name",
+                    "ticket",
+                    "cabin",
+                    "boat",
+                    "body",
+                    "home.dest",
+                ],
+            ),
+        ),
+        ("estimator", BaselineEstimator()),
     ]
 )
 

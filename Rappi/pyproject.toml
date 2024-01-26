@@ -6,10 +6,11 @@ include = '\.pyi?$'
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-# line_length = 88
 include_trailing_comma = true
-# py_version=310
 
+[tool.pytest.ini_options]
+# addopts = "-ra -q"
+testpaths = ["tests"]
 
 [tool.poetry]
 name = "rappi-mle-challenge"
@@ -20,12 +21,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-black = {extras = ["jupyter"], version = "^23.12.1"}
 pandas = "^2.2.0"
 scikit-learn = "^1.4.0"
+pyarrow = "^15.0.0"
 
 [tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^23.12.1"}
 pytest = "^7.4.4"
+coverage = "^7.4.0"
 
 [build-system]
 requires = ["poetry-core"]

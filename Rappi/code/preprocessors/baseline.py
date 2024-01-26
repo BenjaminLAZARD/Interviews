@@ -1,6 +1,7 @@
+import pandas as pd
+from numpy import ndarray
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.preprocessing import OneHotEncoder
-import pandas as pd
 
 
 class CustomPreprocessor(BaseEstimator, TransformerMixin):
@@ -32,34 +33,43 @@ class CustomPreprocessor(BaseEstimator, TransformerMixin):
             if self.categorical_columns is not None
             else X.select_dtypes(include="category").columns
         )
-        self.numerical_columns = [
-            col for col in X.columns if col not in categorical_columns
+        self.categorical_columns = [
+            col for col in categorical_columns if col in self.columns
         ]
+        self.numerical_columns = [
+            col for col in self.columns if col not in self.categorical_columns
+        ]
+
+        # print(self.columns, self.numerical_columns, self.categorical_columns)
+
         self.oh_encoder = OneHotEncoder(
-            categories="auto", handle_unknown="infrequent_if_exist"
+            categories="auto", handle_unknown="infrequent_if_exist", sparse_output=False, drop="if_binary"
         )
-        self.oh_encoder.fit(X[categorical_columns])
+        self.oh_encoder.fit(X[self.categorical_columns])
 
         return self
 
     def transform(self, X: pd.DataFrame, y: pd.DataFrame | None = None) -> pd.DataFrame:
-        Xout = X.copy()
-
-        # Use columns selected at fit time (takes into account ignored columns)
-        Xout = Xout[self.columns]
+        Xout = X.reset_index(drop=True)
 
         # Perform the same OH-encoding than what was done at training time
         Xoutn = Xout[self.numerical_columns]
-        Xoutc = self.oh_encoder.transform(Xout[self.categorical_columns])
+        Xoutc = pd.DataFrame(
+            self.oh_encoder.transform(Xout[self.categorical_columns]),
+            columns=self.oh_encoder.get_feature_names_out(),
+        )
 
-        return pd.concat([Xoutn, Xoutc])
+        # fillna of missing columns with a dummy value
+        Xout = pd.concat([Xoutn, Xoutc], axis=1)
+
+        return Xout.fillna(-1)
 
 
 class AgeTransformer(BaseEstimator, TransformerMixin):
     def fit(self, X: pd.DataFrame, y: pd.DataFrame | None = None) -> TransformerMixin:
-        return X
+        return self
 
     def transform(self, X: pd.DataFrame, y: pd.DataFrame | None = None) -> pd.DataFrame:
-        X = X.copy()
-        X.loc[:, "age"] = X.age.round()
-        return X
+        Xout = X.reset_index(drop=True)
+        Xout.loc[:, "age"] = Xout.age.round()
+        return Xout

@@ -1,10 +1,11 @@
+import pickle
+
 import pandas as pd
 from sklearn.base import BaseEstimator
-import pickle
 
 
 def load_model_from_path(model_path: str) -> BaseEstimator:
-    with open("data.pickle", "rb") as f:
+    with open(model_path, "rb") as f:
         model = pickle.load(f)
     return model
 
