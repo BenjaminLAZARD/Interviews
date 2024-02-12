@@ -1,0 +1,25 @@
+name: text_classification
+
+channels:
+    - defaults
+    - pytorch
+    - nvidia
+    - conda-forge
+
+dependencies:
+    - pandas
+    - pandarallel
+    - dython
+    - pytest
+    - scipy
+    - tqdm
+    - pytorch
+    - torchvision
+    - torchaudio
+    - pytorch-cuda==11.8
+    - scikit-learn
+    - sentence-transformers
+    - nltk
+    - matplotlib
+    - seaborn
+    - xgboost
