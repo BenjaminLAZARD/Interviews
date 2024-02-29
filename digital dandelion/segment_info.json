@@ -1,0 +1,35 @@
+[
+    {
+        "id": 0,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.0,
+        "text": " This is a live recording and a test for live transcription.",
+        "temperature": 0.0,
+        "avg_logprob": -0.2294641931851705,
+        "compression_ratio": 1.2553191489361701,
+        "no_speech_prob": 0.012099746614694595
+    },
+    {
+        "id": 1,
+        "seek": 0,
+        "start": 4.0,
+        "end": 9.0,
+        "text": " My name is Benjamin and I'm talking to you, the avatar.",
+        "temperature": 0.0,
+        "avg_logprob": -0.2294641931851705,
+        "compression_ratio": 1.2553191489361701,
+        "no_speech_prob": 0.012099746614694595
+    },
+    {
+        "id": 2,
+        "seek": 0,
+        "start": 9.0,
+        "end": 15.0,
+        "text": " What I want to know is how many people live in Paris in 2023.",
+        "temperature": 0.0,
+        "avg_logprob": -0.2294641931851705,
+        "compression_ratio": 1.2553191489361701,
+        "no_speech_prob": 0.012099746614694595
+    }
+]
