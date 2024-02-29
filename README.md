@@ -13,3 +13,4 @@ Check out some past interviews organized by skills
 |[Equativ](equativ/)   | Categorical variables analysis and classification  ||✅|✅|||||
 |[Picnic](Picnic/)   | Algorithmic exercises  |||||✅|||
 |[Gauss Labs](GaussLabs/)   | Algorithmic exercises  |||||✅|||
+|[Digital Dandelion](digital%20dandelion/)   | Finding resources for an end-to-end talking avatar  |✅|||✅|||✅|

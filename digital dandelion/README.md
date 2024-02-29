@@ -28,6 +28,11 @@ We want to create a voice-conversational chat interface as described in [assignm
 
 - Google's DialogFlow, Amazon's Lex, Micrsofot Bot, Rasa. These are pre-made solutions requiring limited tech knowledge.
 
+- Nvidia's Omniverse virtual assistant seems promising. I won't spend time installing everything on my own machine as it requires an "omniverse server" to be running in the background. This is a proprietary system and requires some level of investment in time.
+[End-to-End Speech AI Pipelines presentation](https://resources.nvidia.com/en-us-speech-ai-ebooks-gated/speech-ai-using-asr-and-tts)
+[Omniverse Set Up](https://github.com/metaiintw/build-an-avatar-with-ASR-TTS-Transformer-Omniverse-Audio2Face)
+[Python tutorial](https://github.com/metaiintw/build-an-avatar-with-ASR-TTS-Transformer-Omniverse-Audio2Face/blob/main/1.Create_A_Simple_Avatar/1.Creating_a_simple_avatar.ipynb)
+
 ### LLM component to be used
 
 - GPT-4: good, API call possible, but costly, not easy to fine-tune
@@ -68,7 +73,7 @@ After some research, use of quantization can make model small enough so that the
 
 - Mozilla Deepspeech and corresponding streaming capacities [tutorial](https://www.ml4devs.com/articles/how-to-build-python-transcriber-using-mozilla-deepspeech/) Kaldi may be better, but I'll pick Deepspeech given I have limited time. Whisper seems easier for a single text file but less scalable/Trustworthy.
 
-- text-to-video capabilities: we will pick MaKeItTalk as it is more suitable for a long-exchange. This requires going from text to audio first
+- text-to-video capabilities: we will pick MaKeItTalk as it is more suitable for a long-exchange. This requires going from text to audio first. We can use Google TTS (text-to-speech) API or custom libraries allow you to do [voice-cloning](https://www.adrianbulat.com/downloads/python-fan).
 
 - Orchestration
   - We use Mozilla Deepseech continuous streaming from microphone
@@ -77,6 +82,10 @@ After some research, use of quantization can make model small enough so that the
 
 ## Deployment / Hardware
 
+- To use pre-trained models, a good GPU (T4) per user may be sufficient. For training a bigger resource may be needed like A100/A6000. Potentially Google's TPUs. Newest H100 may be considered. Groq LPU may not outperform A100 for complex AI tasks but still work in similar conditions.
+- \> 2^7 Gb RAM would be beneficial.
+- An Web-like API is necessary therefore servers or a cloud architecture would be needed.
+
 ## Actual code
 
 While implementing, the following came up:
@@ -84,8 +93,14 @@ While implementing, the following came up:
 - deepspeech does not seem maintained anymore. So I switched to Whisper and an external VAD called Silero as found in the [tutorial mentioned above](#solutions-retained). The only problem is that it does not support live streaming. I could potentially combine it with [external solutions](https://www.youtube.com/watch?v=zqp_hVZTd-g)...
 - I have a slow internet connection and an old GPU so I had to turn to external resources. Jupyter Colab failed me as we can only use so many GPU hours. I discovered a new solution: Saturn Cloud. It offers 10h per month free of charge and you can connect over ssh.
 - Altough I found no clear explanations on the web, I decided to go with a Gemini's suggested approach: using an audio stream would be compatible with whisper... But this time I ran into another problem. Because I am runing a notebook in the cloud, I don't have access to my own machine microphone. I decided to skip this part for now.
+- I downloaded the latest librbaries and because of that had to make some small changes to the repositories I used (mentioned in the notebook).
+- Resizing to appropriate size the source image for the avatar was needed.
 
 Checkout the [notebook](digital_dandelion_notebook.ipynb)
+
+Now of course there still remains the not so easy task to put it all together...
+
+Audio streaming and understanding is relatively easy. Animating an avatar with a given reply is not that fast thouh.
 
 ## Potential improvements
 
@@ -96,7 +111,9 @@ Checkout the [notebook](digital_dandelion_notebook.ipynb)
 - further training/fine-tuning
 - find a more suitable solution for avatar video generation. The one picked is quite bare-metal.
 - Integrate with proper web development? [code](https://github.com/deepgram-devs/live-transcription-fastapi)
+- Find ways to generate the avatar faster?
 
 ## Notes
 
-Using ChatGPT to find the right tool is really bad. It tried to attach "speech-to-video" to lip-synch and video editing when what I was really looking for was closer to deepfakes.
+- Using ChatGPT to find the right tool is really bad. It tried to attach "speech-to-video" to lip-synch and video editing when what I was really looking for was closer to deepfakes.
+- Gemini proved a bit better at understanding simple coding questions.
