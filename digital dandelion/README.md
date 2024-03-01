@@ -71,9 +71,11 @@ It is actually extremely difficult to find such libraries.
 - Llama2 and its many flavours seem like a good start compared to alternatives like Falcon, GPT, etc because it is open-source, have a good relative performance, and its many flavours make it easier to adapt to hardware needs (Flacon for exemple is very heavy) when training. It is often quite time-consuming
 After some research, use of quantization can make model small enough so that they can run on a single jupyter collab notebook for example HuggingFace's "TheBloke/Llama-2-7b-Chat-GGUF". Recently though Mistral delivered a slightly better performance (weight and RAM being the same) <https://huggingface.co/TheBloke/Mistral-Trismegistus-7B-GGUF> -> Q4KM
 
-- Mozilla Deepspeech and corresponding streaming capacities [tutorial](https://www.ml4devs.com/articles/how-to-build-python-transcriber-using-mozilla-deepspeech/) Kaldi may be better, but I'll pick Deepspeech given I have limited time. Whisper seems easier for a single text file but less scalable/Trustworthy.
+- Whisper
 
-- text-to-video capabilities: we will pick MaKeItTalk as it is more suitable for a long-exchange. This requires going from text to audio first. We can use Google TTS (text-to-speech) API or custom libraries allow you to do [voice-cloning](https://www.adrianbulat.com/downloads/python-fan).
+- Turtoise TTS + Google TTS
+
+- text-to-video capabilities: we will pick MaKeItTalk as it is more suitable for a long-exchange. This requires going from text to audio first.
 
 - Orchestration
   - We use Mozilla Deepseech continuous streaming from microphone
