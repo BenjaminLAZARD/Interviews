@@ -15,3 +15,4 @@ Check out some past interviews organized by skills
 |[Gauss Labs](GaussLabs/)   | Algorithmic exercises  |||||✅|||
 |[Digital Dandelion](digital%20dandelion/)   | Finding resources for an end-to-end talking avatar  |✅|||✅|||✅|
 |[Elqano](elqano/)   | Algorithmic exercises  |||||✅|||
+|[QRT](QRT/)   | Algorithmic exercises  |||||✅|||
