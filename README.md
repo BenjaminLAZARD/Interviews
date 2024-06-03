@@ -17,3 +17,4 @@ Check out some past interviews organized by skills
 |[Elqano](elqano/)   | Algorithmic exercises  |||||✅|||
 |[QRT](QRT/)   | Algorithmic exercises  |||||✅|||
 |[Delos](Delos/Delos.ipynb)   | Maths & algo  |||||✅|||
+|[Mojo](Mojo/README.md)   | Langchain  |✅|||✅||||
