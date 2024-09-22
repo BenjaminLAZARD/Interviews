@@ -18,3 +18,4 @@ Check out some past interviews organized by skills
 |[QRT](QRT/)   | Algorithmic exercises  |||||✅|||
 |[Delos](Delos/Delos.ipynb)   | Maths & algo  |||||✅|||
 |[Mojo](Mojo/README.md)   | Langchain  |✅|||✅||||
+|[Beavr](beavr/README.md)   | WebApp dev  ||||✅||||

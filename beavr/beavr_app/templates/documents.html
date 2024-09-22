@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('new-document-form').addEventListener('submit', async function (event) {
+                event.preventDefault(); // Prevent form from refreshing the page
+            
+                // Get form values
+                const documentId = document.getElementById('documentId').value;
+                const documentName = document.getElementById('documentName').value;
+                const version = document.getElementById('version').value;
+                const description = document.getElementById('description').value;
+                const compliant = document.getElementById('compliant').value; // 'true' or 'false' string
+            
+                // Send data to the server
+                const response = await fetch(`/documents/${documentId}/versions`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        document_name: documentName,
+                        version: version,
+                        description: description,
+                        compliant: compliant
+                    }),
+                });
+            
+                if (response.ok) {
+                    alert('New document version created successfully!');
+                    window.location.reload();
+                } else {
+                    alert('Failed to create document version.');
+                }
+            });
+        });
+        
+        async function deleteDocument(documentId, version) {
+            const response = await fetch(`/documents/${documentId}/${version}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                // Reload the page upon successful deletion
+                window.location.reload();
+            } else {
+                alert('Failed to delete document');
+            }
+        }
+
+        async function toggleCompliance(documentId, version, currentStatus) {
+            const currentStatusBool = (currentStatus.toLowerCase() === 'true');
+            console.log(`current status of ${documentId} is ${currentStatusBool}`)
+            const newStatus = !currentStatusBool; // Toggle the current status
+            console.log(`/documents/${documentId}/versions/${version}/compliance?compliant=${newStatus}`);
+            const response = await fetch(`/documents/${documentId}/versions/${version}/compliance?compliant=${newStatus}`, {
+                method: 'PUT',
+            });
+            if (response.ok) {
+                // Reload the page to reflect the updated status
+                window.location.reload();
+            } else {
+                alert('Failed to update document status');
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/requirements">Requirements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documents">Documents</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Add New Document Version</h2>
+        <form id="new-document-form">
+            <div class="mb-3">
+                <label for="documentId" class="form-label">Document ID</label>
+                <input type="text" class="form-control" id="documentId" name="documentId" required>
+            </div>
+            <div class="mb-3">
+                <label for="documentName" class="form-label">Document Name</label>
+                <input type="text" class="form-control" id="documentName" name="documentName" required>
+            </div>
+            <div class="mb-3">
+                <label for="version" class="form-label">Version</label>
+                <input type="text" class="form-control" id="version" name="version" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="mb-3">
+                <label for="compliant" class="form-label">Compliant</label>
+                <select class="form-control" id="compliant" name="compliant" required>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h1>Documents</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Version</th>
+                    <th>Compliant</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doc in documents %}
+                <tr>
+                    <td>{{ doc.id }}</td>
+                    <td>{{ doc.name }}</td>
+                    <td>{{ doc.description }}</td>
+                    <td>{{ doc.version }}</td>
+                    <td>{{ doc.compliant }}</td>
+                    <td>
+                        <!-- Delete button -->
+                        <button class="btn btn-danger" onclick="deleteDocument('{{ doc.id }}', '{{ doc.version }}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <!-- Toggle compliance button -->
+                        <button class="btn btn-secondary"
+                            onclick="toggleCompliance('{{ doc.id }}', '{{ doc.version }}', '{{doc.compliant}}')">
+                            {% if doc.compliant %}
+                            <i class="fas fa-toggle-on"></i> <!-- Compliant -->
+                            {% else %}
+                            <i class="fas fa-toggle-off"></i> <!-- Non-compliant -->
+                            {% endif %}
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
