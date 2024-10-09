@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["Benjamin LAZARD <benjamin.lazard@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+# python-dotenv
+# fastapi = "^0.115.0"
+# SQLAlchemy = "^2.0.35"
+# uvicorn = "^0.30.6"
+# pydantic = "^2.9.2"
+# h5py
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+extend-select = ["I"]

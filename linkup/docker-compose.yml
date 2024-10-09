@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: linkup_mongodb
+    ports:
+      - "27017:27017"  # Expose MongoDB on the default port
+    volumes:
+      - mongo_data:/data/db  # Persist data
+
+  python:
+    image: python:3.12  # Replace with your desired Python version
+    container_name: linkup_app
+    depends_on:
+      - mongo  # Ensure MongoDB starts before the Python container
+    volumes:
+      - .:/app  # Mount your application code
+    working_dir: /app
+    # Expose port 8000 and define the default command to run the FastAPI application
+    expose:
+      - 8000
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+volumes:
+  mongo_data:
