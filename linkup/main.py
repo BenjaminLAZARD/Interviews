@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 from src.databases.content_db import ContentDB
 from src.databases.embedding_db import VectorDB
-from src.databases.metadata_db import Base, articles_metadata_engine
+from src.databases.metadata_db import Base, articles_metadata_engine, get_db
 from src.etl.handlers import FeedHandler
 from src.etl.transformation import CustomEmbedder
 from src.query.handlers import QueryHandler
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     feedHandler = FeedHandler(
         articles_content_db=content_db,
         articles_embedding_db=vector_db,
-        articles_metadata_db=None,
+        articles_metadata_db=get_db,
     )
 
     feedHandler.upsert_dbs(news_source_name="public")

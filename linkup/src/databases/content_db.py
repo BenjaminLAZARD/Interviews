@@ -3,7 +3,7 @@ import subprocess
 from pathlib import Path
 from time import sleep
 
-from pymongo import MongoClient
+from pymongo import MongoClient, ReplaceOne
 
 
 class ContentDB:
@@ -22,6 +22,13 @@ class ContentDB:
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["content_db"]
         self.collection = self.db["contents"]
+
+    def add_or_replace_articles(self, feed: list[dict[str, str]]):
+        operations = [
+            ReplaceOne({"_id": article["_id"]}, article, upsert=True)
+            for article in feed
+        ]
+        self.collection.bulk_write(operations)
 
     def start_mongodb(self) -> None:
         """
