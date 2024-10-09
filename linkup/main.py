@@ -15,14 +15,14 @@ if __name__ == "__main__":
     Base.metadata.create_all(articles_metadata_engine)
 
     content_db = ContentDB(
-        persist_filepath=Path(os.getenv("ARTICLES_CONTENT_DB_DIR")),
+        persist_dir=Path(os.getenv("ARTICLES_CONTENT_DB_DIR")),
         mongodb_path=Path(os.getenv("MONGODB_PATH", ".")),
         mongodb_tools_path=Path(os.getenv("MONGODB_TOOLS_PATH", ".")),
         local_dev=False,  # set to False with Docker or a local ### mongod.exe --dbpath ".\data\articles_content\" --bind_ip 127.0.0.1
     )
     vector_db = VectorDB(
         embedder=CustomEmbedder(),
-        persist_filepath=Path(os.getenv("ARTICLES_EMBEDDING_DB_FILE")),
+        persist_dir=Path(os.getenv("ARTICLES_EMBEDDING_DB_DIR")),
     )
 
     feedHandler = FeedHandler(
@@ -37,6 +37,3 @@ if __name__ == "__main__":
         "Quel est le rapport entre Pierre Garnier et la star academy, cette emission de danse?"
     )
     print(results)
-    vector_db.dump()
-    content_db.dump()
-    # content_db.stop_mongodb()

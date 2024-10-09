@@ -4,7 +4,12 @@
 
 The context is provided in [Gossip_Semantic_Search.pdf](./Gossip_Semantic_Search.pdf)
 
-launch mongo_db with command `mongod.exe --dbpath "data/articles_content" --bind_ip 127.0.0.1`
+- download mongodb and mongodb tools
+- launch mongo_db with command `mongod.exe --dbpath "data/articles_content" --bind_ip 127.0.0.1`
+- persistence is automatic now
+- populate .env modifying .env.example
+
+## To Explain
 
 ## TODO
 
