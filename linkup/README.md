@@ -15,6 +15,7 @@ The context is provided in [Gossip_Semantic_Search.pdf](./Gossip_Semantic_Search
 
 - [ ] use the persistent client in chromadb plutot que le dump chelou h5py
 - [ ] make sure that databases actually are more object oriented (each db handles the addition of articles)
+- [ ] do I use correctly the dependency injection mechanism for dbs in the app? I should at least explain that I do not know
 - [ ] make sure I keep track of articles added in mongodb so that I don't reinsert existing ones in the chromadb
 - [ ] create unit tests
 - [ ] check structure
@@ -25,3 +26,7 @@ The context is provided in [Gossip_Semantic_Search.pdf](./Gossip_Semantic_Search
 - [ ] can i use pydantic instead of json to create the feed
 - [ ] raise an explicit error if sourcename does not exist in  retrieveLatestRssFeed
 - [ ] I won't do all tests, but for exp I should be careful of upsert operations in the sql db or in the faiss db
+- [ ] remove test_live_api.py from the tests
+
+# Example query: 
+    "Quel est le rapport entre Pierre Garnier et la star academy, cette emission de danse?"
