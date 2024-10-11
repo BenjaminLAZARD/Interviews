@@ -1,4 +1,7 @@
+from pathlib import Path
+
 from fastapi import APIRouter, Depends, Query
+from fastapi.responses import FileResponse
 
 from src.databases.content_db import ContentDB
 from src.databases.dependency_injection import get_content_db, get_vector_db
@@ -6,6 +9,11 @@ from src.databases.embedding_db import VectorDB
 from src.query.handlers import QueryHandler
 
 router = APIRouter()
+
+
+@router.get("/")
+async def serve_frontend():
+    return FileResponse(Path("src/static/index.html"))
 
 
 @router.get("/query/")

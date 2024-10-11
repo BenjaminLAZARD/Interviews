@@ -6,6 +6,7 @@ from typing import Callable
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from src.api.endpoints import router
 from src.databases.content_db import ContentDB
@@ -23,6 +24,7 @@ def initialize_dbs(content_db: ContentDB, vector_db: VectorDB, get_db: Callable)
     )
 
     feedHandler.upsert_dbs(news_source_name="public")
+    feedHandler.upsert_dbs(news_source_name="vsd")
 
 
 @asynccontextmanager
@@ -53,6 +55,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+# Mount static folder for frontend files
+app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
 # Include the endpoint router
 app.include_router(router)
