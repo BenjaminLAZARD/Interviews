@@ -1,6 +1,8 @@
+import pytest
 import requests
 
 
+@pytest.mark.skip(reason="human testable only")
 def test_query_similar_articles(query: str):
     """
     Sends a query to the FastAPI app and returns similar articles.
