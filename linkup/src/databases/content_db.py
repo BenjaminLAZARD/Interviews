@@ -1,9 +1,27 @@
+import os
 import platform
 import subprocess
 from pathlib import Path
-from time import sleep
+from time import sleep, time
 
 from pymongo import MongoClient, ReplaceOne
+
+
+def wait_for_mongo():
+    base_uri = os.getenv(
+        "MONGODB_HOST_NAME", "localhost"
+    )  # Use an env variable or default to localhost
+    mongo_uri = f"""mongodb://{base_uri}:27017/"""
+
+    while True:
+        try:
+            client = MongoClient(mongo_uri)
+            client.server_info()  # This will throw an exception if MongoDB is not ready
+            print("MongoDB is up!", flush=True)
+            break
+        except Exception:
+            print("Waiting for MongoDB to be ready...", flush=True)
+            time.sleep(5)
 
 
 class ContentDB:
@@ -12,14 +30,14 @@ class ContentDB:
         persist_dir: Path,
         mongodb_path: Path = Path("."),
         mongodb_tools_path: Path = Path("."),
-        local_dev: bool = False,
     ) -> None:
         self.persist_dir = persist_dir
         self.mongodb_path = mongodb_path
         self.mongodb_tools_path = mongodb_tools_path
-        if local_dev:
-            self.start_mongodb()
-        self.client = MongoClient("mongodb://localhost:27017/")
+        # if local_dev:
+        #     self.start_mongodb()
+        base_uri = os.getenv("MONGODB_HOST_NAME", "localhost")
+        self.client = MongoClient(f"""mongodb://{base_uri}:27017/""")
         self.db = self.client["content_db"]
         self.collection = self.db["contents"]
 

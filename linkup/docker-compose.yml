@@ -1,26 +1,23 @@
-version: '3.8'
-
 services:
-  mongo:
-    image: mongo:latest
-    container_name: linkup_mongodb
+  app:
+    build:
+      context: .  # Path to the directory containing the Dockerfile
+      dockerfile: Dockerfile
+    container_name: fastapi_app
+    volumes:
+      - ./src:/app/src
     ports:
-      - "27017:27017"  # Expose MongoDB on the default port
-    volumes:
-      - mongo_data:/data/db  # Persist data
-
-  python:
-    image: python:3.12  # Replace with your desired Python version
-    container_name: linkup_app
+      - "8000:8000"  # Map host port 8000 to container port 8000
     depends_on:
-      - mongo  # Ensure MongoDB starts before the Python container
-    volumes:
-      - .:/app  # Mount your application code
-    working_dir: /app
-    # Expose port 8000 and define the default command to run the FastAPI application
-    expose:
-      - 8000
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+      - mongodb  # Wait for MongoDB to start before starting the app
+    environment:
+      - MONGODB_HOST_NAME=mongodb
 
-volumes:
-  mongo_data:
+  mongodb:
+    image: mongo:latest  # Use the official MongoDB image
+    container_name: mongodb
+    volumes:
+      - ./data/articles_content:/data/articles_content  # Bind mount for MongoDB data
+    ports:
+      - "27017:27017"  # Expose MongoDB port
+    command: ["--bind_ip_all"] #["--bind_ip", "127.0.0.1"]

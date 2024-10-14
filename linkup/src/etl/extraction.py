@@ -17,7 +17,7 @@ def retrieveLatestRssFeed(news_source_name: str):
             "link": article.get("link", ""),
             "description": extract_html_from_body(article.content[0].value),
             "publication_date": article.get("published", ""),
-            "creator": article.get("credit", ""),
+            "creator": article.get("author", ""),
             "source": news_source_name,
         }
         for article in feed.entries

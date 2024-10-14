@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from src.api.endpoints import router
-from src.databases.content_db import ContentDB
+from src.databases.content_db import ContentDB, wait_for_mongo
 from src.databases.embedding_db import VectorDB
 from src.databases.metadata_db import Base, articles_metadata_engine, get_db
 from src.etl.handlers import FeedHandler
@@ -31,13 +31,16 @@ def initialize_dbs(content_db: ContentDB, vector_db: VectorDB, get_db: Callable)
 async def lifespan(app: FastAPI):
     load_dotenv()
 
+    # Now stale code
     Base.metadata.create_all(articles_metadata_engine)
+
+    wait_for_mongo()
 
     content_db = ContentDB(
         persist_dir=Path(os.getenv("ARTICLES_CONTENT_DB_DIR")),
         mongodb_path=Path(os.getenv("MONGODB_PATH", ".")),
         mongodb_tools_path=Path(os.getenv("MONGODB_TOOLS_PATH", ".")),
-        local_dev=False,  # set to False with Docker or a local ### mongod.exe --dbpath ".\data\articles_content\" --bind_ip 127.0.0.1
+        # local_dev=False,  # set to False with Docker or a local ### mongod.exe --dbpath ".\data\articles_content\" --bind_ip 127.0.0.1
     )
     vector_db = VectorDB(
         embedder=CustomEmbedder(),
