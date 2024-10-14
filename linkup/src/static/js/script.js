@@ -1,14 +1,4 @@
 document.getElementById('search-btn').addEventListener('click', function () {
-    performSearch();
-});
-
-document.getElementById('query-input').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        performSearch();
-    }
-});
-
-function performSearch() {
     const query = document.getElementById('query-input').value;
     if (!query) return;
 
@@ -16,7 +6,14 @@ function performSearch() {
         .then(response => response.json())
         .then(data => displayResults(data))
         .catch(error => console.error('Error fetching data:', error));
-}
+});
+
+// Adding functionality to hit enter for search
+document.getElementById('query-input').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        document.getElementById('search-btn').click();
+    }
+});
 
 function displayResults(results) {
     const resultsContainer = document.getElementById('results-container');
@@ -29,7 +26,7 @@ function displayResults(results) {
 
     const table = document.createElement('table');
     const headerRow = table.insertRow();
-    ['Title', 'Link', 'Publication Date', 'Creator', 'Source'].forEach(text => {
+    ['Title', 'Link', 'Publication Date', 'Creator', 'Source', 'Toggle'].forEach(text => {
         const th = document.createElement('th');
         th.textContent = text;
         headerRow.appendChild(th);
@@ -51,28 +48,24 @@ function displayResults(results) {
         row.insertCell().textContent = article.source;
 
         // Create a toggle button
-        const toggleCell = row.insertCell();
-        const toggleBtn = document.createElement('button');
-        toggleBtn.classList.add('toggle-btn');
-        toggleBtn.innerHTML = '<span class="triangle"></span>';
+        const toggleButton = document.createElement('button');
+        toggleButton.classList.add('toggle-btn');
+        toggleButton.innerHTML = '<span class="triangle"></span>'; // Add triangle element
+        row.insertCell().appendChild(toggleButton);
 
-        // Create a description row below
+        // Create a new row for the description
         const descriptionRow = table.insertRow();
         const descriptionCell = descriptionRow.insertCell();
-        descriptionCell.colSpan = 6;
-        const descriptionDiv = document.createElement('div');
-        descriptionDiv.classList.add('description');
-        descriptionDiv.textContent = article.description;
-        descriptionDiv.style.display = 'none'; // Hide by default
-        descriptionCell.appendChild(descriptionDiv);
+        descriptionCell.colSpan = 6; // Span across all columns
+        descriptionCell.classList.add('description');
+        descriptionCell.textContent = article.description;
+        descriptionRow.style.display = 'none'; // Hide the description row by default
 
-        toggleBtn.addEventListener('click', function () {
-            const isVisible = descriptionDiv.style.display === 'block';
-            descriptionDiv.style.display = isVisible ? 'none' : 'block';
-            toggleBtn.innerHTML = `<span class="triangle ${isVisible ? '' : 'active'}"></span>`;
+        toggleButton.addEventListener('click', function () {
+            const isVisible = descriptionRow.style.display === 'table-row';
+            descriptionRow.style.display = isVisible ? 'none' : 'table-row';
+            this.classList.toggle('active', !isVisible); // Toggle active class on button
         });
-
-        toggleCell.appendChild(toggleBtn);
     });
 
     resultsContainer.appendChild(table);

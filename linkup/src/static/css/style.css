@@ -38,14 +38,17 @@ body {
     background-color: #074904;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 25px; /* Rounded edges */
+    padding: 10px;
+    border-radius: 50%; /* Circular button */
     cursor: pointer;
     margin-left: -40px;
     display: flex; /* Flexbox to center icon */
     align-items: center; /* Center icon vertically */
     justify-content: center; /* Center icon horizontally */
     transition: background-color 0.3s; /* Smooth transition */
+    width: 50px; /* Width of the button */
+    height: 50px; /* Height of the button */
+    font-size: 100%;
 }
 
 .search-bar button:hover {
@@ -85,49 +88,34 @@ tr:hover {
     align-items: center;
     gap: 5px;
     font-size: 16px;
-    padding: 8px;
     background-color: transparent;
     border: none;
     outline: none;
     color: #074904;
-    width: 100%; /* Make the whole cell clickable */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    transition: color 0.3s; /* Smooth color transition */
 }
 
 .toggle-btn:hover {
-    color: #06850c;
+    color: #06850c; /* Change color on hover */
 }
 
 .toggle-btn .triangle {
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
+    border-left: 10px solid transparent; /* Increase size */
+    border-right: 10px solid transparent; /* Increase size */
     border-top: 10px solid #074904; /* Bigger triangle */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth rotation transition */
+    transform: rotate(-90deg); /* Rotate the triangle */
 }
 
 .toggle-btn.active .triangle {
-    transform: rotate(90deg); /* Rotate the triangle */
+    transform: rotate(0deg); /* Rotate the triangle */
 }
 
 .description {
-    display: none;
     padding: 10px;
     background-color: #f9f9f9;
     border-left: 3px solid #074904;
     border-radius: 5px; /* Rounded corners for description */
-}
-
-#search-btn {
-    background-color: #074904; /* Button color */
-    border: none; /* No border */
-    color: white; /* Icon color */
-    padding: 10px; /* Padding around icon */
-    border-radius: 50%; /* Circular button */
-    cursor: pointer; /* Pointer cursor on hover */
-    width: 50px; /* Width of the button */
-    height: 50px; /* Height of the button */
-    transition: background-color 0.2s; /* Smooth background transition */
-}
-
-#search-btn:hover {
-    background-color: #066502; /* Darker shade on hover */
 }
