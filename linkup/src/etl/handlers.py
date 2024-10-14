@@ -8,17 +8,30 @@ from src.etl.extraction import retrieveLatestRssFeed
 
 
 class FeedHandler:
+    """
+    Class responsible for updating the DDBs given the name of a newssource
+
+    """
+
     def __init__(
         self,
         articles_metadata_db_sesionMaker: Callable,
         articles_content_db: ContentDB,
         articles_embedding_db: VectorDB,
-    ):
+    ) -> None:
         self.articles_metadata_db_sesionMaker = articles_metadata_db_sesionMaker
         self.articles_content_db = articles_content_db
         self.articles_embedding_db = articles_embedding_db
 
-    def upsert_dbs(self, news_source_name: str):
+    def upsert_dbs(self, news_source_name: str) -> None:
+        """
+        Reads appropriate URL for a known news_source
+
+        Parameters
+        ----------
+        - `news_source_name` (str) : name of the newssource (typically in
+          src.orm_models.models.NEWS_SOURCE_2_URL)
+        """
         feed = retrieveLatestRssFeed(news_source_name)
         self.articles_content_db.add_or_replace_articles(feed)
         self.articles_embedding_db.add_or_replace_articles(feed)

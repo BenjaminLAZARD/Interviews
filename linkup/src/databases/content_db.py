@@ -2,15 +2,14 @@ import os
 import platform
 import subprocess
 from pathlib import Path
-from time import sleep, time
+from time import sleep
 
 from pymongo import MongoClient, ReplaceOne
 
 
-def wait_for_mongo():
-    base_uri = os.getenv(
-        "MONGODB_HOST_NAME", "localhost"
-    )  # Use an env variable or default to localhost
+def wait_for_mongo() -> None:
+    """Waits until pymongo can connect with the database"""
+    base_uri = os.getenv("MONGODB_HOST_NAME", "localhost")
     mongo_uri = f"""mongodb://{base_uri}:27017/"""
 
     while True:
@@ -21,10 +20,15 @@ def wait_for_mongo():
             break
         except Exception:
             print("Waiting for MongoDB to be ready...", flush=True)
-            time.sleep(5)
+            sleep(5)
 
 
 class ContentDB:
+    """
+    An Object replicating a persistent no-relational DB.
+    It is responsible for adding articles (or deleting if the method were implemented)
+    """
+
     def __init__(
         self,
         persist_dir: Path,
@@ -42,6 +46,17 @@ class ContentDB:
         self.collection = self.db["contents"]
 
     def add_or_replace_articles(self, feed: list[dict[str, str]]):
+        """
+        Adds an article in the MongoDB.
+
+        If the article already exists, it is assumed that we want to replace it with its newest
+        value.
+
+
+        Parameters
+        ----------
+        - `feed` (list[dict[str, str]]) : typical output of src.etl.extraction.retrieveLatestRssFeed
+        """
         operations = [
             ReplaceOne({"_id": article["_id"]}, article, upsert=True)
             for article in feed
@@ -99,5 +114,9 @@ class ContentDB:
         sleep(3)
 
     def stop_mongodb(self) -> None:
+        """
+        Stops MongoDB server (if it was started already)
+
+        """
         self.mongod_process.terminate()
         self.mongod_process.wait()
