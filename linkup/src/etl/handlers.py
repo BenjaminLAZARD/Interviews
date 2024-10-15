@@ -9,7 +9,7 @@ from src.etl.extraction import retrieveLatestRssFeed
 
 class FeedHandler:
     """
-    Class responsible for updating the DDBs given the name of a newssource
+    Class responsible for updating the DBs given the name of a newssource
 
     """
 
@@ -25,7 +25,8 @@ class FeedHandler:
 
     def upsert_dbs(self, news_source_name: str) -> None:
         """
-        Reads appropriate URL for a known news_source
+        Reads appropriate URL for a known news_source, then upsert the DBS. Any article with the
+        same ID/content will replace its former version (not be duplicated or dropped)
 
         Parameters
         ----------

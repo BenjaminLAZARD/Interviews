@@ -19,3 +19,4 @@ Check out some past interviews organized by skills
 |[Delos](Delos/Delos.ipynb)   | Maths & algo  |||||✅|||
 |[Mojo](Mojo/README.md)   | Langchain  |✅|||✅||||
 |[Beavr](beavr/README.md)   | WebApp dev  ||||✅||||
+|[Linkup](linkup/README.md)   | WebApp dev + similarity search |✅|||✅||✅||

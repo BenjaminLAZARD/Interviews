@@ -9,15 +9,17 @@ The context is provided in [Gossip_Semantic_Search.pdf](./Gossip_Semantic_Search
 - Install [MongoDB](https://www.mongodb.com/try/download/shell) anc corresponding [tools](https://www.mongodb.com/try/download/database-tools)
 - Create a .env file matching .env.example pattern
 - Launch mongodb from the root directory of this project `mongod.exe --dbpath "data/articles_content" --bind_ip 127.0.0.1`
+- The project is built with poetry. After installation, running `poetry install` in this project's root dir should install all dependencies.
 - run in a separate terminal `python main.py`
 - backend only can be tested through `python "tests/api/test_live_api.py"`
-- The front can be used by logging to <http://127.0.0.2:8000/> (unsecure connection)
+- The front can be used by logging to <http://127.0.0.2:8000/> (unsecure connection, not localhost)
 
 ## Run on Docker
 
+- Create a .env file matching .env.example pattern. You don't need to set MONGODB_PATH and MONGODB_TOOLS_PATH 
 - run `docker-compose -p linkup-img  up --build`
 - check the status of the containers, in particular the fastapi_app status (can take a few mins to boot). Even after the app has started, the search bar can return empty results if you don't wait for long enough.
-- The front can be used by logging to <http://127.0.0.2:8000/> (unsecure connection)
+- The front can be used by logging to <http://127.0.0.2:8000/> (unsecure connection, not localhost)
 
 ## Notes
 
@@ -28,7 +30,7 @@ This is a bare-metal solution satisfying the requirements from the exercise.
 In this case we want to store embeddings, article content and metadata. Several solutions are possible here.
 In the end what remains is:
 
-- ChromaDB, a popular vector DB with more support for metadata than FAISS. This DB has its own support for an embedding function... It might have been cleverer to use it, here I just decided to use a custom embedder an to pass embeddings as list of float (chromaDB supports this). ChromaDB simplifies the process for similarity search (as the bahavior is already coded within)
+- ChromaDB, a popular vector DB with more support for metadata than FAISS. This DB has its own support for an embedding function... It might have been cleverer to use it, here I just decided to use a custom embedder an to pass embeddings as list of floats (chromaDB supports this). ChromaDB simplifies the process for similarity search (as the bahavior is already coded within)
 - MongoDB, for the article content and metadata I picked. A No-Relational database. Assuming document content can be very long, it is best not to store this in a RelationDB.
 
 I thought of using SQLite at some point to store relational data between documents, sources, links, authors, etc. and traces of this are left in the code. In the end for this particular usecase it was overkill to use 3 databases.
@@ -44,11 +46,11 @@ I decided to leave to chroma_DB API the similarity search, but usually it is don
 
 ### Populating the database
 
-The database is populated from both gossip websites using a FeedHandler object, attached to the databases. Rather tha scrapping the websites, it will read the RSS from both news websites and .
+The database is populated from both gossip websites using a FeedHandler object, attached to the databases. Rather than scrapping the websites, it will read the RSS from both news websites and process it before upload.
 
 ### Backend
 
-I used FAstAPI as a tool convenient for prototyping and yet easily scalable. Databases pointers are stored within the app state for proper dependency injection when calling the routes, which is not a topic I understand very well yet.
+I used FastAPI as a tool convenient for prototyping and yet easily scalable. Databases pointers are stored within the app state for proper dependency injection when calling the routes, which is not a topic I understand very well yet.
 The API is usable without the front.
 
 Through a POST method, the query is embedded the same way the articles are, compare with others in the vector_DB, then closest embeddings_ids metadata is retrieved from the content_DB.
@@ -75,6 +77,7 @@ Most of the code is packaged under src.
 ### Unit tests
 
 Many unit tests could be written, only a fraction are provided here under tests (lack of time to do a complete run). Pytest was used. Testing MongoDB connection implied a heavy use of mocking.
+If using .vscode, the settings.json should make the IDE's left bar compatible with tests runs, otherwise something like `poetry run python -m ./tests` should work.
 
 ## TODO
 
