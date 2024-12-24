@@ -1,6 +1,7 @@
 import pickle
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from sklearn.cluster import HDBSCAN
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -73,6 +74,62 @@ def train(campaigns_df:pd.DataFrame)->None:
         pickle.dump(vectorizer, file)
     with Path("clusterizer.pkl").open("wb") as file:
         pickle.dump(dbscan, file)
+
+# Define a function to name clusters
+def generate_cluster_names(
+    sentences: np.ndarray,
+    embeddings: np.ndarray,
+    clusters: list[int],
+    top_n_terms: int = 5,
+    ignored_terms: list[str] | None = None,
+)->list[str]:
+    """Find cluster names for text embeddings.
+
+    Parameters
+    ----------
+    - `sentences` (np.ndarray) : setences (text)
+    - `embeddings` (np.ndarray)
+    - `clusters` (list[int]) : cluster labels
+    top_n_terms : int, optional
+        how many terms to use for cluster name, by default 5
+    ignored_terms : list[str], optional
+        terms to be ignored for cluster naming ocnvention
+        , by default ["app", "campaign", "campaigns"]
+
+    Returns
+    -------
+    - (_type_): list of cluster labels and key terms
+
+    """
+    if ignored_terms is None:
+        ignored_terms = ["app", "campaign", "campaigns", "ll"]
+    cluster_names = {}
+    vectorizer = TfidfVectorizer(stop_words="english", max_features=10)
+
+    for cluster_id in np.unique(clusters):
+
+        # Get sentences and embeddings for this cluster
+        cluster_indices = np.where(clusters == cluster_id)[0]
+        cluster_sentences = sentences[cluster_indices]
+        cluster_embeddings = embeddings[cluster_indices]
+
+        # 1. Find the centroid sentence
+        # centroid = cluster_embeddings.mean(axis=0)
+        # distances = cosine_distances([centroid], cluster_embeddings).flatten()
+        # closest_idx = cluster_indices[np.argmin(distances)]
+        # representative_sentence = sentences[closest_idx]
+
+        # 2. Extract top terms with TF-IDF
+        tfidf_matrix = vectorizer.fit_transform(cluster_sentences)
+        terms = vectorizer.get_feature_names_out()
+        top_terms = terms[:top_n_terms]  # Select top N terms
+
+        # 3. Combine to create a cluster name
+        # cluster_name = f"{representative_sentence} ({', '.join(top_terms)})"
+        cluster_name = [term for term in top_terms if term not in ignored_terms]
+        cluster_names[cluster_id] = cluster_name
+
+    return cluster_names
 
 
 if __name__ == "main":
