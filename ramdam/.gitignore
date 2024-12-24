@@ -1,0 +1,4 @@
+# python  ignores
+__pycache__/*
+data/*
+__init__.py

@@ -1,0 +1,7 @@
+langdetect
+pandas
+scikit-learn
+deep-translator
+sentence-transformers
+spacy
+ruff
