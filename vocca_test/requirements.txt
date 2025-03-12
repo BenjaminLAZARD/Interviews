@@ -1,0 +1,4 @@
+"pipecat-ai[daily,google,deepgram,cartesia]"
+pipecat-ai-flows
+websockets
+python-dotenv
