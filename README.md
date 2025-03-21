@@ -11,7 +11,7 @@ Check out some past interviews organized by skills
 | [Rappi](Rappi/)   | Setting up a proper MLE environment in a scalable environment  | |✅|✅|✅||✅|||
 | [Hidden Company](company2/)   | Image analysis using HuggingFace Transformers  | ||||||✅||
 |[Hidden Company](equativ/)   | Categorical variables analysis and classification  ||✅|✅||||||
-|[Hidden Company](Picnic/)   | Algorithmic exercises  |||||✅||||
+|[Hidden Company](company3/)   | Algorithmic exercises  |||||✅||||
 |[Gauss Labs](GaussLabs/)   | Algorithmic exercises  |||||✅||||
 |[Digital Dandelion](digital%20dandelion/)   | Finding resources for an end-to-end talking avatar  |✅|||✅|||✅||
 |[Hidden Company](elqano/)   | Algorithmic exercises  |||||✅||||
