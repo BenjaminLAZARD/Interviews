@@ -12,7 +12,7 @@ Check out some past interviews organized by skills
 | [Hidden Company](company2/)   | Image analysis using HuggingFace Transformers  | ||||||✅||
 |[Hidden Company](equativ/)   | Categorical variables analysis and classification  ||✅|✅||||||
 |[Hidden Company](company3/)   | Algorithmic exercises  |||||✅||||
-|[Gauss Labs](GaussLabs/)   | Algorithmic exercises  |||||✅||||
+|[Hidden Company](company4/)   | Algorithmic exercises  |||||✅||||
 |[Digital Dandelion](digital%20dandelion/)   | Finding resources for an end-to-end talking avatar  |✅|||✅|||✅||
 |[Hidden Company](elqano/)   | Algorithmic exercises  |||||✅||||
 |[QRT](QRT/)   | Algorithmic exercises  |||||✅||||
