@@ -14,10 +14,10 @@ Check out some past interviews organized by skills
 |[Hidden Company](company3/)   | Algorithmic exercises  |||||✅||||
 |[Hidden Company](company4/)   | Algorithmic exercises  |||||✅||||
 |[Digital Dandelion](digital%20dandelion/)   | Finding resources for an end-to-end talking avatar  |✅|||✅|||✅||
-|[Hidden Company](elqano/)   | Algorithmic exercises  |||||✅||||
+|[Hidden Company](company5/)   | Algorithmic exercises  |||||✅||||
 |[QRT](QRT/)   | Algorithmic exercises  |||||✅||||
-|[Hidden Company](Delos/Delos.ipynb)   | Maths & algo  |||||✅||||
+|[Hidden Company](company6/company6.ipynb)   | Maths & algo  |||||✅||||
 |[Hidden Company](Mojo/README.md)   | Langchain  |✅|||✅|||||
-|[Hidden Company](beavr/README.md)   | WebApp dev  ||||✅|||||
+|[Hidden Company](company7/README.md)   | WebApp dev  ||||✅|||||
 |[Linkup](linkup/README.md)   | WebApp dev + similarity search |✅|||✅||✅|||
 |[Vocca](vocca_test/README.md)   | Agentic Flow for voice with pipecat |✅||||✅|✅||✅|
