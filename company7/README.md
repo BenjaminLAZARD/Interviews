@@ -1,4 +1,4 @@
-# BEAVR Interview
+# Interview
 
 ## Problem
 
@@ -53,8 +53,8 @@ We expect to use this prototype as a starting point to discuss current implement
 
 ### Running in a Docker container
 
-- `docker build -t beavr_app .`
-- `docker run -d -p 8000:8000 beavr_app`
+- `docker build -t app .`
+- `docker run -d -p 8000:8000 app`
 - On your local machine visit http://localhost:8000/requirements
 
 And when you're done
@@ -68,5 +68,5 @@ And when you're done
 ## Roadmap
 
 - build unit tests
-- separate javascript, csss from the html (create a static folder under beavr_app with style.css and scripts.js)
+- separate javascript, csss from the html (create a static folder under app with style.css and scripts.js)
 - improve pydantic validation in schemas.py

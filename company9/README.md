@@ -1,19 +1,14 @@
-# Mojo Trial
+# Trial
 
 ## Context of the exercise
 
-In this repository we want to use Chat-GPT 3.5 in order to be able to answer some questions on the transcript of a videocall conference, as part of a recruitment interview for Mojo.
+In this repository we want to use Chat-GPT 3.5 in order to be able to answer some questions on the transcript of a videocall conference, as part of a recruitment interview.
 
 ## Install and Run notes
 
 - The project uses [poetry](https://python-poetry.org/) as a package manager. I recommand using miniforge + mamba to install poetry if not already done. All requirement information is then included in the pyproject.toml run `poetry install` in the root directory.
 - For repository cleanliness and maintenance, black, flake8 and isort are used.
-- In order to store the OpenAI API key, please create a file [config.cfg](./config.cfg) with the following content at the root.
-
-```config
-[OPENAI]
-OPENAI_API_KEY = <your-key-here>
-```
+- In order to store the OpenAI API key, please create a file [config.cfg](./config.cfg) following the example of [config.examplecfg](./config.example.cfg)
 
 - you can just check the alredy executed [cleaned_notebook.ipynb](./cleaned_notebook.ipynb) or run
 
