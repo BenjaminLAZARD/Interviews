@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "mojo trial"
+version = "0.1.0"
+description = "Quick usecase for langchain on the transcription data of a videocall"
+authors = ["Benjamin <email>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.2.1"
+configparser = "^7.0.0"
+openai = "^1.30.5"
+tiktoken = "^0.7.0"
+langchain-community = "^0.2.1"
+langchain-openai = "^0.1.8"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 88
+profile = "black"
+
+[tool.pytest.ini_options]
+# addopts = "-ra -q"
+testpaths = ["tests"]
