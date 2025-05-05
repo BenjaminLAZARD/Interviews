@@ -1,0 +1,4 @@
+```txt
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Adélaïde Fouque -> François Mouret [parent]
+```

@@ -1,0 +1,14 @@
+```txt
+* Pierre Rougon -> [Pierre]
+* Félicité Puech -> [Félicité]
+* Adélaïde -> []
+* Eugène Rougon -> [Eugène]
+* Aristide Rougon -> [Aristide]
+* Pascal Rougon -> [Pascal]
+* Angèle Sicardot -> [Angèle]
+Maxime Rougon -> [le petit Maxime]
+Puech -> [le vieux Puech]
+Lacamp -> [le sieur Lacamp]
+Marquis de Carnavant -> []
+Commandant Sicardot -> [le capitaine retraité]
+```

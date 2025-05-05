@@ -1,0 +1,59 @@
+############################################################
+Expected relationships:  
+############################################################
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Adélaïde Fouque -> Ursule Mouret [parent]
+* Antoine Macquart -> Adélaïde Fouque [child]    # Not included, as per rule: only downward (parent) relationships
+* Pierre Rougon -> Adélaïde Fouque [child]     # Not included, as per rule
+* Pierre Rougon -> Antoine Macquart [sibling]  # Not included, as per rule
+* Pierre Rougon -> Ursule Mouret [sibling]     # Not included, as per rule
+* Antoine Macquart -> unknown1 [parent]
+* unknown1 -> Lisa Macquart [parent]
+* unknown1 -> Gervaise Macquart [parent]
+* unknown1 -> Jean Macquart [parent]
+* Aristide Rougon -> Maxime Rougon [parent]
+* Ursule Mouret -> François Mouret [parent]
+* Ursule Mouret -> Hélène Mouret [parent]
+* Ursule Mouret -> Silvère Mouret [parent]
+* Mouret -> François Mouret [parent]
+* Mouret -> Hélène Mouret [parent]
+* Mouret -> Silvère Mouret [parent]
+* Ursule Mouret -> Mouret [married]
+
+(Note: Based on the instructions and the provided text chunk, only the following relationships are explicitly confirmed or alluded to in the passage. Additional relationships may have been inferred from the general knowledge of the family tree, as would be appropriate from the full text of the first book. If you wish to restrict strictly to the relationships explicitly mentioned in this passage, only the following are directly stated or heavily implied:)
+
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Pierre Rougon -> Marthe Rougon [parent]      # Not directly in this passage, but can be inferred by enumeration of children in other parts of the book
+* Félicité Rougon -> Marthe Rougon [parent]    # Same as above
+
+(If you want to limit solely to the relationships for which there is a direct reference in the above passage, here is the minimal list:)
+
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+
+Let me know if you wish for only those relationships strictly evidenced in the passage, or if you want the broader context from the whole first book/list!

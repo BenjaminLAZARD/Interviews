@@ -1,0 +1,15 @@
+```txt
+* Pascal Rougon -> [Pascal, M. Pascal, ce monsieur qui sentait le mort]
+* Félicité Rougon -> [Félicité, madame Rougon, la vieille femme, petite]
+* Aristide Rougon -> [Aristide]
+* Pierre Rougon -> [Pierre]
+* Marthe Rougon -> [Marthe]
+* Sidonie Rougon -> [Sidonie]
+* Eugène Rougon -> [Eugène]
+M. de Carnavant -> [le marquis de Carnavant, le marquis, ce noble, petit homme, père de Félicité (selon la chronique), le marquis]
+M. de Valqueyras -> [le comte de Valqueyras, le comte]
+M. Isidore Granoux -> [Granoux, M. Isidore Granoux, ancien marchand d’amandes, membre du conseil municipal, oie grasse]
+M. Roudier -> [Roudier, M. Roudier, riche propriétaire, ancien bonnetier, ancien fournisseur de la cour]
+Commandant Sicardot -> [le commandant Sicardot, le commandant, Hercule, beau-père d’Aristide]
+Vuillet -> [le sieur Vuillet, Vuillet, libraire, champion de l’Église, sacristain]
+```

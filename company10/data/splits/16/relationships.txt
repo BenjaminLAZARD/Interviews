@@ -1,0 +1,36 @@
+```txt
+* Silvère Mouret -> Pascal Rougon [cousin]        # Direct mention: "son cousin, le docteur [Pascal Rougon]" (Silvère meeting his cousin Pascal)
+* Silvère Mouret -> unknown1 [parent]             # For cousin: must insert unknown parent of Silvère, cousin to Pascal
+* Pascal Rougon -> unknown1 [parent]              # Pascal and Silvère are cousins, so their parents are siblings; unknown1 is parent of Silvère
+* Pierre Rougon -> Pascal Rougon [parent]         # Pascal is son of Pierre (established in text and from list)
+* Pierre Rougon -> Félicité Rougon [married]      # "sa femme", "mon mari", etc.
+* Pierre Rougon -> Eugène Rougon [parent]         # Eugène is son of Pierre (from list and series context)
+* Pierre Rougon -> Aristide Rougon [parent]       # Aristide is also son of Pierre
+* Pierre Rougon -> Marthe Rougon [parent]         # Marthe is daughter of Pierre (from list)
+* Pierre Rougon -> Sidonie Rougon [parent]        # Sidonie is daughter of Pierre (from list)
+* Félicité Rougon -> Pascal Rougon [parent]       # Félicité is mother of Pascal (in list)
+* Félicité Rougon -> Eugène Rougon [parent]       # Félicité is mother of Eugène
+* Félicité Rougon -> Aristide Rougon [parent]     # Félicité is mother of Aristide
+* Félicité Rougon -> Marthe Rougon [parent]       # Félicité is mother of Marthe
+* Félicité Rougon -> Sidonie Rougon [parent]      # Félicité is mother of Sidonie
+* Adélaïde Fouque -> Pierre Rougon [parent]       # Pierre is son of Adélaïde (from the family tree and list)
+* Adélaïde Fouque -> Antoine Macquart [parent]    # Antoine is also child of Adélaïde
+* Adélaïde Fouque -> Ursule Mouret [parent]       # Ursule is also child of Adélaïde
+* Antoine Macquart -> unknown2 [parent]           # Antoine is parent of Lisa, Gervaise, Jean (from family tree, not direct here)
+* Ursule Mouret -> unknown3 [parent]              # Ursule is mother of François, Hélène, Silvère (from family tree)
+* Mouret -> Ursule Mouret [married]               # Mouret is husband of Ursule
+* Mouret -> François Mouret [parent]              # François, Hélène, Silvère are children of Mouret and Ursule
+* Mouret -> Hélène Mouret [parent]
+* Mouret -> Silvère Mouret [parent]
+* Ursule Mouret -> François Mouret [parent]
+* Ursule Mouret -> Hélène Mouret [parent]
+* Ursule Mouret -> Silvère Mouret [parent]
+```
+
+**Notes:**
+- Because the only explicit relationship in this chunk is "cousin" between Silvère Mouret and Pascal Rougon, but both are Rougon-Macquart, and you requested to break down cousin into parent/parent, I've added "unknown1" as the parent of Silvère (since Pascal's parent is Pierre). This can be replaced by Ursule Mouret + Mouret once the whole tree is clear.
+- All other relationships are inferred from the established family structure in the list (since the text here doesn't break down all parenthoods but the task is to build the tree for later DAG building).
+- "married" is used only where the text or list confirms it (Pierre/Félicité, Mouret/Ursule).
+- If you want only relationships strictly mentioned or implied in this text chunk, you can reduce the output to just the cousin relationship (and its break down), and the married ones, but typically the family tree structure is repeated from context as above.
+
+Let me know if you want a more restrictive extraction (strictly only what is in this text chunk and nothing else)!

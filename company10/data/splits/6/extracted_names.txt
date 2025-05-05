@@ -1,0 +1,17 @@
+```txt
+* Pierre Rougon -> [Pierre]
+* Eugène Rougon -> [Eugène]
+* Aristide Rougon -> [Aristide, le journaliste]
+* Félicité Rougon -> [Félicité]
+Granoux -> []
+Roudier -> []
+Vuillet -> []
+le marquis -> [M. de Carnavant]
+le commandant Sicardot -> [le commandant]
+M. Peirotte -> []
+le comte de Valqueyras -> []
+le président de la République -> []
+le prince Louis Bonaparte -> [le prince Louis, Bonaparte]
+Cavaignac -> []
+Henri V -> []
+```

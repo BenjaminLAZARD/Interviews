@@ -1,0 +1,24 @@
+```txt
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Pierre Rougon -> Sidonie Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Sidonie Rougon [parent]
+* Pierre Rougon -> Félicité Rougon [married]
+* Aristide Rougon -> Maxime Rougon [parent]
+```
+
+**Explanation of relationships found in the text:**
+- The text clearly establishes that Pierre Rougon is the son of Adélaïde Fouque and that Félicité Rougon becomes his wife.
+- It details that Pierre and Félicité have three sons: Eugène, Pascal, Aristide, and later, two daughters: Marthe and Sidonie.
+- Aristide is said to have a son, Maxime (with Angèle, who is not Rougon-Macquart, so her relationship is not listed).
+- Antoine Macquart is mentioned as the brother of Pierre Rougon and thus also a child of Adélaïde Fouque.
+
+If you process more text and encounter additional direct relationships, such as parents of other family members, you can add them in the same format. Let me know if you need to process other sections!

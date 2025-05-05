@@ -1,0 +1,34 @@
+```txt
+* Pierre Rougon -> Marthe Rougon [parent]
+* Marthe Rougon -> François Mouret [married]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Pierre Rougon -> Félicité Rougon [married]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Adélaïde Fouque -> Ursule Mouret [parent]
+* Antoine Macquart -> Lisa Macquart [parent]
+* Antoine Macquart -> Gervaise Macquart [parent]
+* Antoine Macquart -> Jean Macquart [parent]
+* Ursule Mouret -> François Mouret [parent]
+* Ursule Mouret -> Hélène Mouret [parent]
+* Ursule Mouret -> Silvère Mouret [parent]
+* Mouret -> François Mouret [parent]
+* Mouret -> Hélène Mouret [parent]
+* Mouret -> Silvère Mouret [parent]
+* Ursule Mouret -> Mouret [married]
+* Aristide Rougon -> Maxime Rougon [parent]
+```
+
+**Notes:**
+- Only relationships between members of the Rougon-Macquart family are listed.
+- "Parent" is used for all parent/child relationships unless the text gives a more specific link.
+- "Married" is used for couples.
+- Some relationships (e.g., children of Mouret/Ursule and of Antoine Macquart) are inferred from established canon and context in the passage, as they are referenced as such (e.g., Gervaise and Jean as children of Antoine Macquart; François as son of Ursule and Mouret, etc.).
+- If you wish to restrict only to relationships directly and unambiguously mentioned in this chunk, let me know!

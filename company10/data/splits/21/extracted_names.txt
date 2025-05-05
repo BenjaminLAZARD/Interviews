@@ -1,0 +1,18 @@
+```txt
+* Pierre Rougon -> [Rougon, Pierre, le président, le marchand d'huile, le héros, sauveur de Plassans]
+* Félicité Rougon -> [Félicité, la vieille femme, sa mère (par Aristide)]
+* Aristide Rougon -> [Aristide, le jeune homme, son fils (par Félicité)]
+* Eugène Rougon -> [Eugène, mon frère (par Aristide)]
+* Antoine Macquart -> [Macquart, Antoine]
+* Silvère -> []
+* tante Dide -> [tante Dide, sa mère (par Antoine), l’aïeule (par Antoine)]
+Granoux -> [Monsieur Isidore, l’ancien marchand d’amandes, le monsieur qui a sonné le tocsin avec un marteau]
+Roudier -> []
+Dubruel -> [le charcutier Dubruel]
+M. Garçonnet -> []
+Angèle -> [sa femme (par Aristide)]
+le notaire -> [la forte tête de la bande, le chef de la députation]
+le concierge -> []
+le bedeau -> []
+M. le curé -> []
+```

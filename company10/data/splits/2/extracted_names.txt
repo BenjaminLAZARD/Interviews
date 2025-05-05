@@ -1,0 +1,17 @@
+```txt
+Silvère -> []
+Miette -> [la Chantegreil]
+le père de Miette -> [Chantegreil]
+Rébufat -> [le méger du Jas-Meiffren]
+Burgat -> [le forgeron]
+monsieur le curé -> []
+le sous-préfet -> []
+le receveur particulier -> []
+le conservateur des hypothèques -> []
+le directeur des postes -> []
+Pierre Rougon -> [Pierre]
+Adélaïde Fouque -> [Adélaïde]
+Rougon -> []
+Macquart -> [ce gueux de Macquart]
+le dernier des Fouque -> []
+```

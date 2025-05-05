@@ -19,4 +19,5 @@ Check out some past interviews organized by skills
 |[Company 7](company7/README.md)   | WebApp dev  ||||✅|||||
 |[Company 8](company8/README.md)   | WebApp dev + similarity search |✅|||✅||✅|||
 |[Company 9](company9/README.md)   | Langchain  |✅|||✅|||||
+|[Company 10](company10/README.md)   | Build a familly tree from a book using genAI  |||||✅|||✅|
 |[Vocca](vocca_test/README.md)   | Agentic Flow for voice with pipecat |✅||||✅|✅||✅|

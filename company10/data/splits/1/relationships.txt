@@ -1,0 +1,11 @@
+```txt
+* Antoine Macquart -> Silvère Mouret [parent]
+```
+
+**Explanation:**
+
+- The only direct relationship between Rougon-Macquart family members in this chunk is the mention by [Silvère Mouret] that his "oncle Antoine Macquart" is "ouvrier comme moi et qui m’a appris à aimer la république", and that "si ma grand’mère ne m’avait pas recueilli et élevé, que serais-je devenu ? À part l’oncle Antoine Macquart... tous mes autres parents...".
+- This indicates that Antoine Macquart is Silvère Mouret's uncle, i.e. Antoine Macquart is the sibling of one of Silvère's parents. However, since we want "parent" relationships and to avoid siblings for the tree, and since the direct parent relationship is not stated in this chunk, but the uncle relationship is, we output the non-direct relationship as per the rules.
+- No "married" relationships or other parent relationships between starred family members are mentioned in this excerpt.
+
+If you find a later chunk where Silvère's parent is named (i.e. Ursule Mouret or Mouret), you could break it down further. But here, only the uncle relationship is given.

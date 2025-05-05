@@ -1,0 +1,51 @@
+```txt
+* Aristide Rougon -> Maxime Rougon [parent]
+* Aristide Rougon -> Pierre Rougon [parent]     # (from "leurs parents", but more direct sources needed for full confirmation, keep as probable if you wish)
+* Aristide Rougon -> Félicité Rougon [parent]   # (as above)
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]       # not directly from this passage, mention in name mapping ("le fils aîné", "mon frère (par Aristide)"), so can infer
+* Pierre Rougon -> Aristide Rougon [parent]     # not directly from this passage, but inferred from "le fils d’Aristide", "son fils", so can add
+* Pierre Rougon -> Pascal Rougon [parent]       # not directly from this passage, but known from overall structure, see mapping
+* Pierre Rougon -> Marthe Rougon [parent]       # as above
+* Pierre Rougon -> Sidonie Rougon [parent]      # as above
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Sidonie Rougon [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Antoine Macquart -> Gervaise Macquart [parent]
+* Antoine Macquart -> Jean Macquart [parent]
+* Adélaïde Fouque -> Ursule Mouret [parent]     # not directly in this chunk, but included for completeness if desired
+* Ursule Mouret -> François Mouret [parent]     # not in this chunk, but inferred from the names list and known tree
+```
+
+### Explanation
+
+- **Direct textual evidence in this chunk:**
+    - "le fils d’Aristide" → *Aristide Rougon* is parent of *Maxime Rougon*.
+    - "sa mère" (par Aristide, in name mapping) → *Félicité Rougon* is parent of *Aristide Rougon*.
+    - "mon mari" (for Félicité) → *Pierre Rougon* married to *Félicité Rougon*.
+    - *Antoine Macquart* recounting his children (*Gervaise Macquart* and *Jean Macquart*) leaving him and referring to them as "ses enfants".
+
+- **Inferred from consistent name/role mapping (from your names list):**
+    - All children of *Pierre Rougon* and *Félicité Rougon* (Eugène, Aristide, Pascal, Marthe, Sidonie).
+    - *Adélaïde Fouque* is parent to both *Pierre Rougon* and *Antoine Macquart* (and Ursule Mouret, not directly in this text, but standard to the family tree).
+    - *Ursule Mouret* is parent of *François Mouret*, again for completeness.
+
+#### Note:
+- "unknown" nodes are not required here as all direct relationships are covered by listed characters.
+- If you want to limit strictly to relationships directly mentioned in THIS CHUNK, remove any line that is only inferred from the names list and not directly referenced here.
+- If you want the strictest subset, the lines that are directly evidenced in this chunk are:
+
+```txt
+* Aristide Rougon -> Maxime Rougon [parent]
+* Pierre Rougon -> Félicité Rougon [married]
+* Antoine Macquart -> Gervaise Macquart [parent]
+* Antoine Macquart -> Jean Macquart [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+```
+
+Let me know if you want the strict subset or the full inferred one!

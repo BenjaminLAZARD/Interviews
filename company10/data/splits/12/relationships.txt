@@ -1,0 +1,13 @@
+```txt
+* Aristide Rougon -> Pascal Rougon [sibling]
+* Aristide Rougon -> Antoine Macquart [sibling]  # Note: "oncle" (from earlier context in the book) – but by your rules, keep direct; if not explicit in this chunk, can omit or clarify
+# However, in this chunk, the direct relationship "sibling" is only explicit between Aristide and Pascal via "frère".
+```
+
+**Explanation:**
+
+- The only explicit relationship between Rougon-Macquart family members in this chunk is that Aristide Rougon and Pascal Rougon are brothers (see: "son frère [Pascal Rougon]").
+- Antoine Macquart appears, but there is no direct relationship stated in this chunk to the others in the family. The phrase "l’oncle [Antoine Macquart]" is referenced elsewhere in the novel (not in this chunk), so unless you wish to add all known relationships, only those explicit in this text are output.
+- No "parent" or "married" relationships are mentioned in this excerpt.
+
+**If you wish to include all relationships known from the book up to this point, or from previous outputs, please clarify!**

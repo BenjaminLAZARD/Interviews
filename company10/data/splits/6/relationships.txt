@@ -1,0 +1,8 @@
+```txt
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Eugène Rougon -> Aristide Rougon [sibling]
+```

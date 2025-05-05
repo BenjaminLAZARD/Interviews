@@ -1,0 +1,11 @@
+```txt
+* tante Dide -> Silvère Mouret [parent]
+```
+
+**Explanation**:  
+From the text, we learn that Silvère Mouret vit auprès de sa grand’mère ([tante Dide]), which establishes a parent-child link (Silvère is the grandchild, but since we prefer "parent" relationships and go downwards, we only record tante Dide as parent to Silvère's parent in other steps).  
+No other Rougon-Macquart relationships are established in this chunk.  
+If more context on Ursule Mouret or other Rougon-Macquart members were provided, more links could be added.  
+No "married" relationships are indicated in this chunk.  
+No need for "unknown" placeholders in this step.  
+```

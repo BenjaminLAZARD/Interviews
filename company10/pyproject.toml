@@ -1,0 +1,11 @@
+[project]
+name = "familytree_from_book"
+version = "0.1.0"
+description = "Builds a family tree from a book"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "openai>=1.76.2",
+    "python-dotenv>=1.1.0",
+]

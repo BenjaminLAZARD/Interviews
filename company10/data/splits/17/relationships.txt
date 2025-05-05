@@ -1,0 +1,27 @@
+############################################################
+Expected relationships:
+############################################################
+
+* Pierre Rougon -> Félicité Rougon [married]  
+* Pierre Rougon -> Antoine Macquart [sibling]  
+
+############################################################
+
+**Justification:**
+- The text clearly states that Antoine Macquart is the "brother" of Pierre Rougon ("Mon brigand de frère est chez lui ?" and "mon plus proche parent", "son frère").
+- Pierre Rougon and Félicité Rougon are described as husband and wife ("son mari", "elle se précipita au-devant de son mari", "elle lui sauta au cou", etc.).
+
+**Note:**  
+- No parent/child relationships are explicitly mentioned in this passage.
+- Sibling is mentioned, but according to your rules, if possible, use "parent" or "married". Here, "sibling" is direct, but if you wish to represent it strictly as parent relationships in the tree, you may need to create an "unknown" parent node for both—however, as the text only says "brother", the most precise is the sibling relationship. If you want to break it down into parent links, you’ll need to introduce "unknown1" as their common parent, which is not indicated in this chunk.
+- No other Rougon-Macquart family relationships are mentioned in this chunk. Only Pierre, Félicité, and Antoine are present.
+
+---
+
+**If you want the relationships strictly as "parent" and "married" (as per your instructions to avoid "sibling" if possible), you could infer:**
+
+* unknown1 -> Pierre Rougon [parent]
+* unknown1 -> Antoine Macquart [parent]
+* Pierre Rougon -> Félicité Rougon [married]
+
+But based on this chunk alone, without evidence of a specific parent, the first, more literal representation is accurate. Let me know if you want the "unknown" parent version!
