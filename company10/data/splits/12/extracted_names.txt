@@ -1,0 +1,16 @@
+```txt
+Silvère -> []
+Miette -> []
+Justin -> []
+Rébufat -> [le méger, le père Rébufat]
+Eulalie Chantegreil -> []
+Chantegreil -> []
+* Aristide -> []
+* Pascal -> []
+* Macquart -> []
+M. Garçonnet -> []
+Sicardot -> [le commandant Sicardot]
+M. Peirotte -> [le receveur]
+Antoine -> [l’oncle Antoine]
+Dide -> [tante Dide]
+```

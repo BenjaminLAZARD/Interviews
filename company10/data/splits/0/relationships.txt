@@ -1,0 +1,13 @@
+```txt
+Adélaïde Fouque -> unknown1 [parent]
+unknown1 -> Silvère Mouret [parent]
+```
+
+**Explanation:**
+
+- In this excerpt, the only Rougon-Macquart member explicitly mentioned is [Adélaïde Fouque] ("tante Dide").
+- Silvère Mouret is not marked as a Rougon-Macquart in your asterisked list, but based on naming conventions and the tree structure, he is a descendant and will be relevant for the family tree.
+- The text says: "demain matin, [Adélaïde Fouque] aurait pu me le voir prendre, et cela l’aurait inquiétée…", which indicates that Adélaïde Fouque lives with Silvère (or is a close family member).
+- From the canonical structure of the Rougon-Macquart family (and as will be made clear in later text), Adélaïde Fouque is Silvère's grandmother, but since the direct parent (Silvère's parent) is not named so far in this chunk, we insert an unknown: Adélaïde Fouque -> unknown1 [parent], unknown1 -> Silvère Mouret [parent].
+
+No other Rougon-Macquart names are mentioned or mapped in this chunk, so this is the only relationship to extract at this step.

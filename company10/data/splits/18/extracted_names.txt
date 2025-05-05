@@ -1,0 +1,18 @@
+```txt
+* Pierre Rougon -> [Rougon, Pierre]
+* Félicité Rougon -> [Félicité]
+* Aristide Rougon -> [Aristide, le jeune homme]
+* Macquart -> [le chef, le frère de Rougon]
+Granoux -> [l'ancien marchand d'amandes, mon ami]
+Roudier -> [l'ancien bonnetier, commandant Roudier]
+Dubruel -> [le charcutier Dubruel]
+Liévin -> [M. Liévin]
+Massicot -> [M. Massicot]
+Vuillet -> [le libraire]
+Rengade -> [le borgne]
+Picou -> [monsieur Picou]
+Touche -> [monsieur Touche]
+M. Garçonnet -> [le maire, M. le maire]
+le marquis de Carnavant -> [le marquis]
+le comte de Valqueyras -> [le comte]
+```

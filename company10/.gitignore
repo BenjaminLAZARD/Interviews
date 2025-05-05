@@ -1,0 +1,7 @@
+# environment
+.python-version
+uv.lock
+.venv
+
+#IDE
+.vscode

@@ -1,0 +1,17 @@
+```txt
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> unknown1 [married]
+unknown1 -> Pierre Rougon [parent]
+* Adélaïde Fouque -> unknown2 [married]
+unknown2 -> unknown3 [parent]
+``` 
+
+**Explanation:**
+
+- The excerpt explicitly states that Adélaïde Fouque had a son (Pierre Rougon) with her first husband, a "garçon jardinier, un nommé Rougon." His canonical name is not in the provided list (only Pierre Rougon, their son, is listed), so he is represented as unknown1.
+- Adélaïde Fouque married this man, so a [married] relationship is recorded.
+- After this first husband's death, Adélaïde Fouque had an affair with "ce gueux de Macquart" (again, not in the starred Rougon-Macquart names, but the "Macquart" in your list is Antoine Macquart, their child, not the father). The actual Macquart lover (the father of Antoine) is not a starred character and so is represented as unknown2.
+- The result of this second relationship is stated later in the book, but in this chunk it's implied Adélaïde Fouque had another child (who will be Antoine Macquart), but since that explicit parenthood is not stated in this exact chunk, a placeholder is used ("unknown3").
+- If later in the text, the children of Adélaïde Fouque with Macquart (Antoine Macquart and Ursule Mouret) are described, you would replace unknown3 with the appropriate names and add those relationships.
+
+**No other direct Rougon-Macquart family relationships are described in this excerpt. If other explicit parent/married relationships among starred characters appear, add them similarly.**

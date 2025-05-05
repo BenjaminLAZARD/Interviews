@@ -1,0 +1,17 @@
+```txt
+* Félicité Rougon -> [Félicité, la vieille, la vieille gueuse, la petite mère]
+* Pierre Rougon -> [Pierre, le gros sournois, le marchand d'huile, mon mari, le pauvre homme, le président]
+* Eugène Rougon -> [Eugène]
+* Aristide Rougon -> [Aristide]
+* Pascal Rougon -> [Pascal, le grand innocent]
+* Macquart -> [Macquart, Antoine, le frère, le prisonnier, le vieux coquin]
+* Silvère -> [Silvère, le petit Silvère]
+M. Vuillet -> [Vuillet, monsieur Vuillet]
+M. de Carnavant -> [M. de Carnavant, le marquis, l'agent]
+M. Garçonnet -> [M. Garçonnet, le maire]
+Sicardot -> [Sicardot]
+Roudier -> [Roudier]
+Granoux -> [Granoux]
+le concierge -> [le concierge]
+tante Dide -> [tante Dide]
+```

@@ -1,0 +1,12 @@
+```txt
+* Adélaïde Fouque -> Antoine Macquart [married]
+* Adélaïde Fouque -> Silvère Mouret [parent]
+```
+
+**Explanation:**
+
+- The text describes [Adélaïde Fouque] and [Antoine Macquart] as lovers ("[Adélaïde Fouque] se pendait à son cou, [Adélaïde Fouque] restait sur sa poitrine...") in a way that in the context of the family tree, and as per the conventions of the Rougon-Macquart genealogy, is typically interpreted as a marital/parental relationship.
+- [Silvère Mouret] is described as being raised by [Adélaïde Fouque] and is her "enfant", indicating a [parent] relationship.
+- No other direct relationships between Rougon-Macquart family members are explicitly mentioned in this excerpt.
+
+If you want further breakdowns (such as the connection from Adélaïde to Mouret, or to Ursule), or if you want to process another excerpt, let me know!

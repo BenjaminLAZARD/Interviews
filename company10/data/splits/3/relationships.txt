@@ -1,0 +1,42 @@
+```txt
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Adélaïde Fouque -> Ursule Mouret [parent]
+* Pierre Rougon -> unknown1 [parent]
+* unknown1 -> Pierre Rougon [parent]
+* Adélaïde Fouque -> unknown2 [married]
+* unknown2 -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [non-marital relationship]
+* Antoine Macquart -> Ursule Mouret [sibling]
+* Antoine Macquart -> Pierre Rougon [sibling]
+* Ursule Mouret -> Pierre Rougon [sibling]
+* Ursule Mouret -> Antoine Macquart [sibling]
+```
+
+**Explanation:**
+
+- *Adélaïde Fouque* is the mother of *Pierre Rougon*, *Antoine Macquart*, and *Ursule Mouret*. This is clear from the text: "En vingt mois, elle eut deux enfants, un garçon, puis une fille." and "ils étaient ses enfants au même titre que son premier né".
+- *Pierre Rougon* is the legitimate son (child from marriage) of *Adélaïde Fouque* and her (first) husband, whose name is not given in this chunk, so referred to as unknown1.
+- *Adélaïde Fouque* was married (or in a formal union) to unknown1, who is the father of *Pierre Rougon*. This is inferred from "l’enfant légitime, le fils légitime" and the repeated mention of first marriage.
+- *Adélaïde Fouque* had a non-marital relationship with *Antoine Macquart*, resulting in *Antoine Macquart* and *Ursule Mouret* ("bâtards de sa mère… gardés auprès d’elle…").
+- Explicit marriage between *Adélaïde Fouque* and *Antoine Macquart* is denied in the text: "De mariage entre eux, il n’en fut pas un instant question." Thus, their relationship is not "married" but rather "non-marital relationship."
+- Sibling relationships are implied: all three children (Pierre, Antoine, Ursule) are described as being raised together and fighting as siblings.
+
+**Notes for Graph Construction:**
+
+- For the relationships, "parent" and "married" are preferred, but since Adélaïde and Antoine are explicitly not married, a "non-marital relationship" edge is used, per the instructions.
+- The unknown parent (unknown1) is placeholder for the first husband of Adélaïde, father of Pierre.
+- For graphical purposes, "sibling" edges are not necessary if the parent relationships are present, but are listed here for completeness due to their strong presence in the text. If following strict rules, they can be omitted in the graph since they can be inferred.
+
+**Minimal set for DAG/family tree:**
+```txt
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+* Adélaïde Fouque -> Ursule Mouret [parent]
+* unknown1 -> Pierre Rougon [parent]
+* Adélaïde Fouque -> unknown1 [married]
+* Adélaïde Fouque -> Antoine Macquart [non-marital relationship]
+* Antoine Macquart -> Ursule Mouret [sibling]
+```
+
+Let me know if you'd like the minimal set or if you wish to keep all explicit relationships!

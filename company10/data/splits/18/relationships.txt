@@ -1,0 +1,10 @@
+############################################################
+Expected relationships:  (complete here)
+############################################################
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Antoine Macquart [sibling]
+* Antoine Macquart -> Pierre Rougon [sibling]
+
+(Note: Since the preferred relationship is "parent" or "married", and "sibling" is only used when no parent relationship is possible. But here, based on the text chunk, it is clear that Pierre Rougon and Antoine Macquart are brothers, so we note the sibling relationship. If their parent is known elsewhere, this can be replaced by both being children of the same parent in the full tree.)

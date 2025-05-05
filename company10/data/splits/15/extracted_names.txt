@@ -1,0 +1,11 @@
+```txt
+Silvère -> []
+Miette -> []
+Chantegreil -> []
+Justin -> []
+tante Dide -> [Dide]
+Marie -> []
+commandant Sicardot -> [Sicardot]
+Garçonnet -> []
+Peirotte -> []
+```

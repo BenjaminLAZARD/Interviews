@@ -1,0 +1,20 @@
+```txt
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Aristide Rougon -> Maxime Rougon [parent]
+```
+
+**Explanation (for transparency):**
+- [Pierre Rougon] and [Félicité Rougon] are husband and wife.
+- Text mentions that [Aristide Rougon], [Eugène Rougon], [Pascal Rougon], and [Marthe Rougon] are their children.
+- [Aristide Rougon] has a son, [Maxime Rougon].
+- [Silvère Mouret] and [Adélaïde Fouque] are mentioned, but their direct relationship to the others is not explicitly stated in this chunk, so not added here.
+- Only direct "parent" and "married" links are used, per instructions.
+```

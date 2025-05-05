@@ -1,0 +1,24 @@
+############################################################
+Expected relationships:
+############################################################
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Pierre Rougon -> Sidonie Rougon [parent]
+* Félicité Rougon -> Sidonie Rougon [parent]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+
+############################################################
+
+**Notes about extraction (justification):**
+- The text repeatedly confirms the marital relationship between Pierre Rougon and Félicité Rougon.
+- Eugène Rougon, Aristide Rougon, Pascal Rougon, Marthe Rougon, and Sidonie Rougon are referred to as sons/daughters of Pierre and Félicité, and as siblings to each other.
+- Adélaïde Fouque is referred to (indirectly, via Pierre Rougon being her son in the passage about the receipt for 50,000 francs) as the parent of Pierre Rougon.
+- No direct mention in this chunk of the parentage of Aristide, Pascal, Marthe, and Sidonie, but as the context and naming (Rougon) plus repeated references to "leurs enfants", "leurs fils", etc., indicate they are children of Pierre and Félicité, we can include them.
+- No marriage/parent relationships are established in this chunk for other Rougon-Macquart members, such as Antoine Macquart, Ursule Mouret, etc., so they are not included here.

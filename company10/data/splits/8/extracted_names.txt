@@ -1,0 +1,18 @@
+```txt
+* Aristide Rougon -> [M. Aristide Rougon, Aristide]
+* Pierre Rougon -> [Pierre, le marchand d'huile, Rougon]
+* Félicité Rougon -> [Félicité, la vieille femme, la vaniteuse petite femme, la femme de Pierre]
+* Antoine Macquart -> [Antoine, le jeune homme]
+* Adélaïde -> [la pauvre femme, la mère, la malheureuse femme]
+* Ursule -> [la sœur, la sœur d'Antoine, la sœur de Mouret]
+* Mouret -> [l'ouvrier chapelier, le mari d'Ursule]
+Sicardot -> [le commandant, le commandant Sicardot, le farouche commandant, le terrible Sicardot, vieux soldat de Napoléon]
+Granoux -> [Granoux]
+Roudier -> [Roudier]
+Vuillet -> [Vuillet]
+Garçonnet -> [M. Garçonnet, le maire]
+de Carnavant -> [le marquis, M. de Carnavant]
+Macquart -> [l'ivrogne de Macquart, le père d'Antoine]
+Le camarade d'Antoine -> [le camarade, le témoin, l'ivrogne qui accompagnait le jeune homme]
+Le domestique de Sicardot -> [le domestique du commandant, le messager]
+```

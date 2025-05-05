@@ -1,0 +1,17 @@
+```txt
+* Félicité Rougon -> [Félicité, la vieille femme, la petite vieille, la mère]
+* Pierre Rougon -> [Pierre, le marchand d'huile, le mari, son mari, le pantin, Pierre Rougon]
+* Eugène Rougon -> [Eugène, le fils aîné]
+* Aristide Rougon -> [Aristide, le cher Aristide, le journaliste, M. Aristide Rougon, l'éminent collaborateur]
+* Pascal Rougon -> [Pascal, le médecin, le fils Pascal]
+M. de Carnavant -> [le marquis, le petit vieillard]
+Roudier -> [M. Roudier]
+Granoux -> [M. Granoux, l'ancien marchand d'amandes]
+Sicardot -> [le commandant Sicardot, le commandant]
+Vuillet -> []
+M. Peirotte -> [le receveur particulier]
+M. Garçonnet -> [le maire, M. Garçonnet]
+Angèle -> []
+le sous-préfet -> []
+le libraire -> [le libraire qui dirigeait le journal]
+```

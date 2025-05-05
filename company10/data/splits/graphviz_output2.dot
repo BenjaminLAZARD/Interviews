@@ -1,0 +1,51 @@
+digraph RougonMacquartFamilyTree {
+    rankdir = TB;
+    size = "10";
+    node [shape = record;];
+    
+    // Married couples as grouped nodes
+    m1 [label = "{Pierre Rougon | Félicité Rougon}";];
+    m2 [label = "{Antoine Macquart | Joséphine Gavaudan}";];
+    m3 [label = "{Mouret | Ursule Mouret}";];
+    m4 [label = "{François Mouret | Marthe Rougon}";];
+    
+    // Individual children and unrelated members
+    "Eugène Rougon";
+    "Aristide Rougon";
+    "Pascal Rougon";
+    "Marthe Rougon";
+    "Sidonie Rougon";
+    "Lisa Macquart";
+    "Gervaise Macquart";
+    "Jean Macquart";
+    "Maxime Rougon";
+    "François Mouret";
+    "Hélène Mouret";
+    "Silvère Mouret";
+    "Adélaïde Fouque";
+    
+    // Children from each couple
+    m1 -> "Eugène Rougon";
+    m1 -> "Aristide Rougon";
+    m1 -> "Pascal Rougon";
+    m1 -> "Marthe Rougon";
+    m1 -> "Sidonie Rougon";
+    
+    m2 -> "Lisa Macquart";
+    m2 -> "Gervaise Macquart";
+    m2 -> "Jean Macquart";
+    
+    m3 -> "François Mouret";
+    m3 -> "Hélène Mouret";
+    m3 -> "Silvère Mouret";
+    
+    m4 -> "François Mouret";
+    
+    // Connections from Adélaïde
+    "Adélaïde Fouque" -> m1;
+    "Adélaïde Fouque" -> "Antoine Macquart";
+    "Adélaïde Fouque" -> "Ursule Mouret";
+    
+    // Aristide's son
+    "Aristide Rougon" -> "Maxime Rougon";
+}

@@ -1,0 +1,18 @@
+```txt
+* Pierre Rougon -> [Pierre]
+* Marthe Rougon -> [Marthe, la fille cadette]
+* François Mouret -> [François]
+* Adélaïde -> [tante Dide]
+* Aristide Rougon -> [Aristide]
+* Eugène Rougon -> [Eugène]
+* Pascal Rougon -> [Pascal]
+* Félicité Rougon -> [Félicité]
+* Maxime Rougon -> [Maxime, le fils d’Aristide]
+* Silvère Mouret -> [Silvère, le petit Silvère]
+* Mouret -> []
+* Antoine Macquart -> [Antoine, Macquart, le père, l’oncle Macquart]
+Fine -> [Fine, la mère]
+Jean Macquart -> [Jean]
+Gervaise Macquart -> [Gervaise]
+Vian -> []
+```

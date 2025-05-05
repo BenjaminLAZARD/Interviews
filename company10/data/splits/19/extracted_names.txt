@@ -1,0 +1,12 @@
+```txt
+* Pierre Rougon -> [Rougon, Pierre]
+* Félicité Rougon -> [Félicité, madame Rougon]
+* Eugène Rougon -> [Eugène]
+* Aristide Rougon -> [Aristide]
+Granoux -> [Isidore Granoux, M. Isidore Granoux]
+Roudier -> []
+le marquis -> [le marquis]
+Vuillet -> [le libraire, le directeur des postes, monsieur Vuillet]
+Adélaïde -> []
+Macquart -> [le pauvre frère de Rougon]
+```

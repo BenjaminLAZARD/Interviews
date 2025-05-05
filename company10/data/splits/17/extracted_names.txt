@@ -1,0 +1,12 @@
+```txt
+* Pierre Rougon -> [Pierre]
+* Antoine Macquart -> [Macquart]
+* Félicité Rougon -> [Félicité]
+Granoux -> []
+Roudier -> []
+Cassoute -> []
+Garçonnet -> [M. Garçonnet]
+Peirotte -> [M. Peirotte]
+Vuillet -> []
+Sicardot -> []
+```

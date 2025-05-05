@@ -1,0 +1,31 @@
+```txt
+* Pierre Rougon -> Félicité Rougon [married]
+* Pierre Rougon -> Eugène Rougon [parent]
+* Félicité Rougon -> Eugène Rougon [parent]
+* Pierre Rougon -> Aristide Rougon [parent]
+* Félicité Rougon -> Aristide Rougon [parent]
+* Pierre Rougon -> Pascal Rougon [parent]
+* Félicité Rougon -> Pascal Rougon [parent]
+* Pierre Rougon -> Marthe Rougon [parent]
+* Félicité Rougon -> Marthe Rougon [parent]
+* Pierre Rougon -> Sidonie Rougon [parent]
+* Félicité Rougon -> Sidonie Rougon [parent]
+* Pierre Rougon -> Antoine Macquart [sibling]
+* Antoine Macquart -> Pierre Rougon [sibling]
+* Pierre Rougon -> Adélaïde Fouque [child]
+* Antoine Macquart -> Adélaïde Fouque [child]
+* Adélaïde Fouque -> Pierre Rougon [parent]
+* Adélaïde Fouque -> Antoine Macquart [parent]
+```
+
+**Notes:**
+- Only direct relationships are extracted.
+- "Sibling" relationship is included here because the text strongly and repeatedly refers to "brother", but in your final tree construction you may want to convert "sibling" into parent links to a common parent ("unknown1" if not otherwise known). If you prefer, let me know and I can do it in this output.
+- The relationship of Sidonie Rougon and Marthe Rougon as children of Pierre and Félicité is not explicit in this chunk, but if you want only what is directly in this chunk, you can remove those lines. Here I included them as the children of Pierre/Félicité are collectively referenced ("avec des enfants comme les nôtres ! Eugène... Aristide... Pascal...").
+- If you want to avoid the [sibling] relationship and instead use a common parent (which, according to the list, is Adélaïde Fouque), you could write:
+    * Adélaïde Fouque -> Pierre Rougon [parent]
+    * Adélaïde Fouque -> Antoine Macquart [parent]
+- But since "Adélaïde Fouque" is not directly mentioned as "parent" in this chunk, use your preferred method.
+- No marriage of Adélaïde is referenced in this chunk; her connection to Pierre and Antoine is as parent only.
+
+Let me know if you want to handle "sibling" relationships differently!
